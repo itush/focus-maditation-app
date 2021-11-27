@@ -1,0 +1,52 @@
+body {
+  background-color: #202124;
+  /*background-image: radial-gradient(#333, #111);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: ivory;
+  text-align: center;
+  width: 100vw;
+  font-weight: 400;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#fly-out {
+  font-size: 2em;
+  margin: 40vh auto;
+  height: 20vh; 
+ 
+}
+
+#fly-out span {
+  display: block;
+  font-size: 2em;
+  opacity: .8;
+}
+
+#fly-out div {
+ position: fixed; 
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  animation: switch 16s linear infinite;
+}
+
+#fly-out div:nth-child(2) { animation-delay: 4s}
+#fly-out div:nth-child(2) { animation-delay: 4s}
+#fly-out div:nth-child(3) { animation-delay: 8s}
+#fly-out div:nth-child(4) { animation-delay: 12s}
+
+
+@keyframes switch {
+    0% { opacity: 0;filter: blur(20px); transform:scale(.1)}
+    3% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    10% { opacity: 1;filter: blur(0); transform:scale(1)}
+    13% { opacity: 0;filter: blur(0); transform:scale(4)}
+    33% { opacity: 0;filter: blur(0); transform:scale(8)}
+    53% { opacity: 0;filter: blur(10px); transform:scale(12)}
+    73% { opacity: 0}    
+    100% { opacity: 0}
+}
